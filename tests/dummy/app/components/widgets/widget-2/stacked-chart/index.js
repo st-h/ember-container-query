@@ -104,7 +104,7 @@ export default class WidgetsWidget2StackedChartComponent extends Component {
   }
 
   @action onResize(entry) {
-    debounce(this, () => this.refreshChart(entry.target), 50);
+    debounce(this, this.refreshChart, entry.target, 50);
   }
 
   @action refreshChart(element) {
